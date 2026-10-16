@@ -2,7 +2,7 @@
 
 A simple calculator in Python with error handling.
 
-## US English
+## 🇺🇸 English
 
 ### Features
 - Addition, subtraction, multiplication, division
@@ -24,7 +24,7 @@ Result: 15
 
 ---
 
-## BR Versão em Português
+## 🇧🇷 Versão em Português
 
 ### Funcionalidades
 - Soma, subtração, multiplicação, divisão
