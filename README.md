@@ -48,6 +48,7 @@ cd meus-projetos-python
 
 # Run any project
 python calculadora.py
+```
 
 ---
 
