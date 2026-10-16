@@ -1,3 +1,7 @@
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Security](https://img.shields.io/badge/Security-000000?style=for-the-badge&logo=shield&logoColor=white)
+![AI](https://img.shields.io/badge/AI-FF6F00?style=for-the-badge&logo=openai&logoColor=white)
+
 # 🐍 Python Journey: From Basics to AI & Security
 ### (us English version below | BR Versão em português abaixo)
 
