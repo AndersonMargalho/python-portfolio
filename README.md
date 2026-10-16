@@ -43,7 +43,8 @@ git clone https://github.com/AndersonMargalho/meus-projetos-python.git
 cd meus-projetos-python
 
 # Execute qualquer projeto
-python calculadora.py```
+python calculadora.py
+```
 
 📫 Contato
 GitHub: @AndersonMargalho
