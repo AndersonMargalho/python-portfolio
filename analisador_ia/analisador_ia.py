@@ -1,32 +1,61 @@
-from google import genai
-from dotenv import load_dotenv
+"""AI Sentiment Analyzer — Gemini API integration demo.
+
+Part of python-portfolio. Demonstrates environment-based API key
+management, structured (JSON) prompt engineering and error handling.
+"""
+
 import os
 import sys
 
-# Carrega as variáveis do arquivo .env
+from dotenv import load_dotenv
+from google import genai
+
 load_dotenv()
 
-# Configuração do Cliente com a Nova SDK do Google
 API_KEY = os.getenv("GEMINI_API_KEY")
-client = genai.Client(api_key=API_KEY)
+MODEL = "gemini-2.5-flash"
 
-def analisar_texto():
-    print(f"--- AI SENTIMENT ANALYZER (Experimental Environment) ---")
-    print(f"Running on Python: {sys.version.split()[0]}")
-    
-    texto = input("\nEnter text to analyze: ")
-    if not texto: return
+PROMPT_TEMPLATE = (
+    "Classify the sentiment of the text below as POSITIVE, NEGATIVE or NEUTRAL. "
+    'Respond ONLY with valid JSON: '
+    '{{"sentiment": "<label>", "confidence": <0-1>, "reason": "<one sentence>"}}\n\n'
+    "Text: {text}"
+)
 
-    try:
-        response = client.models.generate_content(
-            model="gemini-1.5-flash", 
-            contents=f"Analyze sentiment (POSITIVE, NEGATIVE, or NEUTRAL): {texto}"
+
+def build_client() -> genai.Client:
+    if not API_KEY:
+        sys.exit(
+            "ERROR: GEMINI_API_KEY not found. Set it in a .env file "
+            "(see README) or as an environment variable."
         )
-        print(f"\nAI Result: {response.text.strip()}")
-        
-    except Exception as e:
-        print(f"\n[TECHNICAL NOTE] API Connection established, but model returned: {e}")
-        print("Diagnosis: Model version mismatch or service not yet active for this experimental Python build.")
+    return genai.Client(api_key=API_KEY)
+
+
+def analyze_sentiment(client: genai.Client, text: str) -> str:
+    response = client.models.generate_content(
+        model=MODEL,
+        contents=PROMPT_TEMPLATE.format(text=text),
+    )
+    return response.text.strip()
+
+
+def main() -> None:
+    print("--- AI Sentiment Analyzer ---")
+    print(f"Python: {sys.version.split()[0]} | Model: {MODEL}")
+
+    text = input("\nEnter text to analyze: ").strip()
+    if not text:
+        print("No text provided. Exiting.")
+        return
+
+    client = build_client()
+    try:
+        print(f"\nAI Result: {analyze_sentiment(client, text)}")
+    except Exception as exc:
+        print(f"\nERROR: request failed -> {exc!r}")
+        print("Check: (1) API key validity, (2) model name, (3) network.")
+
 
 if __name__ == "__main__":
-    analisar_texto()
+    main()
