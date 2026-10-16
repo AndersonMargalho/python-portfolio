@@ -12,27 +12,38 @@ A simple calculator in Python with error handling.
 ### How to Use
 ```bash
 python calculadora.py
+```
 
-Example
-
+### Example
+```
 Enter first number: 10
 Enter operator (+, -, *, /): +
 Enter second number: 5
 Result: 15
+```
 
-## 🇧🇷 Versão em Português
-Funcionalidades
-Soma, subtração, multiplicação, divisão
+---
 
-Tratamento de erros (divisão por zero, entrada inválida)
+## BR Versão em Português
 
-Loop para operações contínuas
+### Funcionalidades
+- Soma, subtração, multiplicação, divisão
+- Tratamento de erros (divisão por zero, entrada inválida)
+- Loop para operações contínuas
 
+### Como Usar
+```bash
 python calculadora.py
+```
 
+### Exemplo
+```
 Digite o primeiro número: 10
 Digite o operador (+, -, *, /): +
 Digite o segundo número: 5
 Resultado: 15
+```
 
-Author: Anderson Margalho
+---
+
+**Author:** Anderson Margalho
