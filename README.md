@@ -44,3 +44,12 @@ cd meus-projetos-python
 
 # Execute qualquer projeto
 python calculadora.py
+
+📫 Contato
+GitHub: @AndersonMargalho
+
+Email: andersonmargalho@gmail.com
+
+Autor: Anderson Margalho
+Repositório criado para fins de estudo e construção de portfólio profissional.
+
