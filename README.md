@@ -22,7 +22,7 @@ Welcome to my repository! This space documents my evolution in Python, moving fr
 | **Artificial Intelligence** | `google-genai` SDK, LLM integration, Prompt Engineering (JSON structured) |
 | **Environment** | Development and testing in **Python 3.14**, Git version control |
 
-###  Project Files
+### 📂 Project Files
 
 #### 🚀 Initial Projects (Foundations)
 | # | Project | Description |
@@ -40,7 +40,7 @@ Welcome to my repository! This space documents my evolution in Python, moving fr
 | 7 | 🌐 [Port Scanner](./scanner_portas/) | Network tool to identify open services |
 | 8 | 🤖 [AI Sentiment Analyzer](./analisador_ia/) | Integration with Google Gemini API (JSON output) |
 
-### ️ Ethical Disclaimer
+### ⚠️ Ethical Disclaimer
 > The **Port Scanner** (`scanner_portas`) is an educational tool. Only scan networks and systems you own or have explicit written permission to test. Unauthorized scanning is illegal in most jurisdictions.
 
 ### 🔑 AI Project Setup (`analisador_ia`)
@@ -53,62 +53,69 @@ Welcome to my repository! This space documents my evolution in Python, moving fr
 
 ### 🚀 How to Use
 
-```bash
-# Clone the repository
-git clone https://github.com/AndersonMargalho/python-portfolio.git
+    # Clone the repository
+    git clone https://github.com/AndersonMargalho/python-portfolio.git
 
-# Navigate to the folder
-cd python-portfolio
+    # Navigate to the folder
+    cd python-portfolio
 
-# Run any project (example)
-python calculadora/calculadora.py
+    # Run any project (example)
+    python calculadora/calculadora.py
 
-🇷 BR Versão em Português
+---
+
+## 🇧🇷 BR Versão em Português
+
 Bem-vindo ao meu repositório! Este espaço documenta minha evolução em Python, partindo da lógica fundamental até aplicações avançadas em Segurança da Informação e Inteligência Artificial.
-🛠 Tecnologias e Conceitos Aplicados
 
-🛠 Tecnologias e Conceitos Aplicados
-Área
-Tecnologias
-Fundamentos
-Controle de fluxo, Laços de repetição, Funções Modulares
-Segurança e Redes
-hashlib (Integridade de Dados), socket (Varredura de Rede)
-Inteligência Artificial
-SDK google-genai, integração com LLMs, Engenharia de Prompt (saída JSON)
-Ambiente
-Desenvolvimento e testes em Python 3.14, controle de versão com Git
+### 🛠 Tecnologias e Conceitos Aplicados
 
-📂 Arquivos do Projeto
-🚀 Projetos Iniciais (Base)
-#
-Projeto
-Descrição
-1
-📄 Analisador de Texto
-Análise de strings e contagem de caracteres
-2
-🧮 Calculadora
-Operações matemáticas com tratamento de erros
-3
-🌡️ Conversor de Temperatura
-Conversão de unidades em loop
-4
-🔒 Gerador de Senhas
-Geração de strings aleatórias seguras
-5
-🎲 Jogo de Adivinhação
-Lógica interativa com sistema de pontuação
-️ Projetos Avançados (Segurança e IA)
-#
-Projeto
-Descrição
-6
-🔐 Verificador de Hash
-Garantia de integridade de dados usando SHA-256
-7
-🌐 Scanner de Portas
-Ferramenta de rede para identificar serviços abertos
-8
-Analisador de Sentimento com IA
-Integração com API do Google Gemini (saída JSON)
+| Área | Tecnologias |
+|---|---|
+| **Fundamentos** | Controle de fluxo, Laços de repetição, Funções Modulares |
+| **Segurança e Redes** | `hashlib` (Integridade de Dados), `socket` (Varredura de Rede) |
+| **Inteligência Artificial** | SDK `google-genai`, integração com LLMs, Engenharia de Prompt (saída JSON) |
+| **Ambiente** | Desenvolvimento e testes em **Python 3.14**, controle de versão com Git |
+
+### 📂 Arquivos do Projeto
+
+#### 🚀 Projetos Iniciais (Base)
+| # | Projeto | Descrição |
+|---|---|---|
+| 1 | 📄 [Analisador de Texto](./analisador_texto/) | Análise de strings e contagem de caracteres |
+| 2 | 🧮 [Calculadora](./calculadora/) | Operações matemáticas com tratamento de erros |
+| 3 | 🌡️ [Conversor de Temperatura](./conversor_temperatura/) | Conversão de unidades em loop |
+| 4 | 🔒 [Gerador de Senhas](./gerador_senhas/) | Geração de strings aleatórias seguras |
+| 5 | 🎲 [Jogo de Adivinhação](./jogo_adivinhacao/) | Lógica interativa com sistema de pontuação |
+
+#### 🛡️ Projetos Avançados (Segurança e IA)
+| # | Projeto | Descrição |
+|---|---|---|
+| 6 | 🔐 [Verificador de Hash](./verificador_hash/) | Garantia de integridade de dados usando SHA-256 |
+| 7 | 🌐 [Scanner de Portas](./scanner_portas/) | Ferramenta de rede para identificar serviços abertos |
+| 8 | 🤖 [Analisador de Sentimento com IA](./analisador_ia/) | Integração com API do Google Gemini (saída JSON) |
+
+### ⚠️ Aviso Ético
+> O **Scanner de Portas** (`scanner_portas`) é uma ferramenta educacional. Varreda apenas redes e sistemas que você possui ou tem permissão explícita por escrito para testar. Varreduras não autorizadas são ilegais na maioria das jurisdições.
+
+### 🔑 Configuração do Projeto de IA (`analisador_ia`)
+1. Obtenha uma chave de API gratuita no [Google AI Studio](https://aistudio.google.com/)
+2. Crie um arquivo `.env` na raiz do repositório com: `GEMINI_API_KEY=sua-chave-aqui`
+3. Instale as dependências: `pip install -r analisador_ia/requirements.txt`
+4. Execute: `python analisador_ia/analisador_ia.py`
+
+> Nunca commite o `.env` — ele está listado no `.gitignore`.
+
+### 🚀 Como Usar
+
+    # Clonar o repositório
+    git clone https://github.com/AndersonMargalho/python-portfolio.git
+
+    # Navegar até a pasta
+    cd python-portfolio
+
+    # Executar qualquer projeto (exemplo)
+    python calculadora/calculadora.py
+
+---
+<p align="center">Maintained by <b>Anderson Margalho</b> — Freelance Software Engineer & IT Consultant (Belém, Brazil).<br/>Open to research collaborations and freelance projects.</p>
