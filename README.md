@@ -4,7 +4,7 @@
 
 ---
 
-## 🇺🇸 English Version
+## US English Version
 
 Welcome to my repository! This space documents my evolution in Python, moving from fundamental logic to advanced applications in Information Security and Artificial Intelligence.
 
