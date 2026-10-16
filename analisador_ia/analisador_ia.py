@@ -1,9 +1,13 @@
 from google import genai
+from dotenv import load_dotenv
+import os
 import sys
 
+# Carrega as variáveis do arquivo .env
+load_dotenv()
+
 # Configuração do Cliente com a Nova SDK do Google
-# Substitua pela sua chave para testes locais
-API_KEY = minha_chave = "SUA_CHAVE_AQUI"
+API_KEY = os.getenv("GEMINI_API_KEY")
 client = genai.Client(api_key=API_KEY)
 
 def analisar_texto():
@@ -14,8 +18,6 @@ def analisar_texto():
     if not texto: return
 
     try:
-        # Usando o modelo Gemini 3.1 Flash descoberto via ListModels
-        # Nota: Pode retornar 404 se o serviço de geração ainda não estiver ativo para Python 3.14
         response = client.models.generate_content(
             model="gemini-1.5-flash", 
             contents=f"Analyze sentiment (POSITIVE, NEGATIVE, or NEUTRAL): {texto}"
